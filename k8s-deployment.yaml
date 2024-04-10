@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-python-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: python-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-python-app
-        image: akdevopscoaching/mypython-app
+        image: myacrrepo1906.azurecr.io/pythondockerimage:5
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
